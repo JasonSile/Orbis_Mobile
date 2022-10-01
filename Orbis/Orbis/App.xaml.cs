@@ -10,7 +10,7 @@ namespace Orbis
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new TabbedPage1());
         }
 
         protected override void OnStart()
