@@ -17,17 +17,6 @@ namespace Orbis
         public HelpPage()
         {
             InitializeComponent();
-            GetNews();
-        }
-        public async Task GetNews()
-        {
-            HttpClient myHttpClient = new HttpClient();
-            myHttpClient.BaseAddress = "https://api.reliefweb.int/";
-
-            string uri = "v1/reports?appname=apidoc&limit=2";
-            var response = await myHttpClient.GetAsync(uri);
-
-            var materials = JsonSerializer.Deserialize<NewsModel>(response, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         }
     }
 }
